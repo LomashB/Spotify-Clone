@@ -17,13 +17,7 @@ function secondsToMinutesSeconds(totalSeconds) {
 
 async function getSongs(folder) {
   currFolder = folder;
-<<<<<<< Updated upstream
   let url = `http://192.168.150.237:3000/assets/songs/${folder}`;
-=======
-  // let url = `http://192.168.150.237:3000/assets/songs/${folder}`;
-  let url = `https://www.movie-streaming-website-homepage.vercel.app/assets/songs/${folder}`;
-
->>>>>>> Stashed changes
 
   let a = await fetch(url);
   let response = await a.text();
@@ -92,13 +86,7 @@ const playMusic = (track, pause = false) => {
 
 
 async function displayAlbums() {
-<<<<<<< Updated upstream
   let url = `http://192.168.150.237:3000/assets/songs`;
-=======
-  // let url = `http://192.168.150.237:3000/assets/songs`;
-  let url = `https://www.movie-streaming-website-homepage.vercel.app/assets/songs`;
-
->>>>>>> Stashed changes
   let a = await fetch(url);
   let response = await a.text();
   let div = document.createElement("div");
@@ -112,12 +100,7 @@ async function displayAlbums() {
     if (e.href.includes("/songs") && !e.href.includes(".htacess")) {
       let folderName = e.href.split("/").slice(-2)[0];
       let a = await fetch(
-<<<<<<< Updated upstream
         `http://192.168.150.237:3000/assets/songs/${folderName}/info.json`
-=======
-        // `http://192.168.150.237:3000/assets/songs/${folderName}/info.json`
-        `https://www.movie-streaming-website-homepage.vercel.app/songs/${folderName}/info.json`
->>>>>>> Stashed changes
       );
       let response = await a.json();
 
