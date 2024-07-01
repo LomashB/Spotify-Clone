@@ -18,7 +18,7 @@ function secondsToMinutesSeconds(totalSeconds) {
 async function getSongs(folder) {
   currFolder = folder;
   // let url = `http://192.168.150.237:3000/assets/songs/${folder}`;
-  let url = `https://www.movie-streaming-website-homepage.vercel.appassets/songs/${folder}`;
+  let url = `https://www.movie-streaming-website-homepage.vercel.app/assets/songs/${folder}`;
 
   let a = await fetch(url);
   let response = await a.text();
