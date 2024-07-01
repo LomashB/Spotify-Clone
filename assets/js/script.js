@@ -17,7 +17,7 @@ function secondsToMinutesSeconds(totalSeconds) {
 
 async function getSongs(folder) {
   currFolder = folder;
-  let url = `http://192.168.150.237:3000/DAY_12/assets/songs/${folder}`;
+  let url = `http://192.168.150.237:3000/assets/songs/${folder}`;
 
   let a = await fetch(url);
   let response = await a.text();
@@ -75,7 +75,7 @@ async function getSongs(folder) {
 }
 
 const playMusic = (track, pause = false) => {
-  currentSong.src = `/DAY_12/assets/songs/${currFolder}/` + track;
+  currentSong.src = `/assets/songs/${currFolder}/` + track;
   if (!pause) {
     currentSong.play();
     play.src = "assets/images/pause.svg";
@@ -86,7 +86,7 @@ const playMusic = (track, pause = false) => {
 
 
 async function displayAlbums() {
-  let url = `http://192.168.150.237:3000/DAY_12/assets/songs`;
+  let url = `http://192.168.150.237:3000/assets/songs`;
   let a = await fetch(url);
   let response = await a.text();
   let div = document.createElement("div");
@@ -100,7 +100,7 @@ async function displayAlbums() {
     if (e.href.includes("/songs") && !e.href.includes(".htacess")) {
       let folderName = e.href.split("/").slice(-2)[0];
       let a = await fetch(
-        `http://192.168.150.237:3000/DAY_12/assets/songs/${folderName}/info.json`
+        `http://192.168.150.237:3000/assets/songs/${folderName}/info.json`
       );
       let response = await a.json();
 

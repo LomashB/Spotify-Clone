@@ -107,7 +107,7 @@ body {
 }
 
 .library {
-  min-height: 73vh;
+  min-height: 62vh;
   height: auto;
   position: relative;
 }
@@ -284,7 +284,7 @@ body {
 }
 
 .songList {
-  height: 60vh;
+  height: 45vh;
   overflow-y: auto;
   margin-block: 10px;
 }
