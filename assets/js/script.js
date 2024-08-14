@@ -2,6 +2,8 @@ let currentSong = new Audio();
 let songs;
 
 let currFolder;
+let heatUrl = "https://al9ixllf0ukbcdts.public.blob.vercel-storage.com/"
+
 
 function secondsToMinutesSeconds(totalSeconds) {
   const minutes = Math.floor(totalSeconds / 6)
